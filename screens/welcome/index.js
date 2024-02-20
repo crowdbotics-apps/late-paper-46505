@@ -1,5 +1,6 @@
+plaintext;
 import React from "react";
-import { View, Text, TextInput, TouchableOpacity, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, SafeAreaView, StyleSheet, Linking } from "react-native";
 
 const LoginScreen = () => {
   return <SafeAreaView style={styles.container}>
@@ -9,6 +10,9 @@ const LoginScreen = () => {
         <TextInput style={styles.input} placeholder="Password" secureTextEntry />
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Sign In</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.termsLink} onPress={() => Linking.openURL('https://tinyurl.com/42evm3m3')}>
+          <Text style={styles.termsText}>Terms and Conditions</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>;
@@ -61,6 +65,13 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#fff",
     fontSize: 18
+  },
+  termsLink: {
+    marginTop: 20
+  },
+  termsText: {
+    color: "#007BFF",
+    textDecorationLine: "underline"
   }
 });
 export default LoginScreen;
