@@ -1,10 +1,10 @@
 javascript;
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, View, Text, TextInput, TouchableOpacity, Image, Linking } from 'react-native';
+import React, { useState } from "react";
+import { SafeAreaView, StyleSheet, View, Text, TextInput, TouchableOpacity, Image, Linking } from "react-native";
 
 const LoginScreen = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     // Handle login logic
@@ -14,7 +14,7 @@ const LoginScreen = () => {
   return <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
+        uri: "https://tinyurl.com/42evm3m3"
       }} style={styles.logo} />
       </View>
       <View style={styles.inputContainer}>
@@ -24,7 +24,7 @@ const LoginScreen = () => {
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={() => Linking.openURL('http://example.com/terms')}>
+      <TouchableOpacity onPress={() => Linking.openURL("http://example.com/terms")}>
         <Text style={styles.linkText}>Terms and Conditions</Text>
       </TouchableOpacity>
     </SafeAreaView>;
@@ -33,9 +33,9 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#f5f5f5'
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#f5f5f5"
   },
   logoContainer: {
     marginBottom: 20
@@ -45,28 +45,28 @@ const styles = StyleSheet.create({
     height: 100
   },
   inputContainer: {
-    width: '80%'
+    width: "80%"
   },
   input: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 5,
     marginBottom: 10
   },
   button: {
-    backgroundColor: '#007bff',
+    backgroundColor: "#007bff",
     padding: 15,
     borderRadius: 5,
-    alignItems: 'center'
+    alignItems: "center"
   },
   buttonText: {
-    color: '#fff',
-    fontWeight: 'bold'
+    color: "#fff",
+    fontWeight: "bold"
   },
   linkText: {
     marginTop: 20,
-    color: '#007bff'
+    color: "#007bff"
   }
 });
 export default LoginScreen;
